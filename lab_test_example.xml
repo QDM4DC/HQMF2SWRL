@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='/measures/eMeasure.xsl'?>
+
+<QualityMeasureDocument xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+  <component typeCode="COMP"> 
+    <section> 
+      <entry typeCode="DRIV"> 
+        <evidence typeCode="RULE"> 
+          <sourceOf typeCode="PRCN"> 
+            <conjunctionCode code="AND"/>  
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"> 
+              <sourceOf typeCode="PRCN"> 
+                <conjunctionCode code="OR"/>  
+                <act classCode="ACT" moodCode="EVN" isCriterionInd="true"> 
+                  <!-- Laboratory Test, Result pattern -->  
+                  <templateId root="2.16.840.1.113883.3.560.1.12"/>  
+                  <id root="cb1b5851-de2f-4567-b877-ac4249533a92"/>  
+                  <code code="30954-2" displayName="Results" codeSystem="2.16.840.1.113883.6.1"/>  
+                  <sourceOf typeCode="COMP"> 
+                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                      <code code="2.16.840.1.113883.3.117.1.7.1.213" displayName="INR LOINC Value Set" codeSystem="2.16.840.1.113883.3.560.101.1"/>  
+                      <title>Laboratory Test, Result: INR (result &gt;= 2 )</title>  
+                      <statusCode code="completed"/>  
+                      <sourceOf typeCode="REFR"> 
+                        <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                          <templateId root="2.16.840.1.113883.3.560.1.1019.3"/>  
+                          <code code="385676005" codeSystem="2.16.840.1.113883.6.96" displayName="result" codeSystemName="SNOMED-CT"/>  
+                          <value xsi:type="IVL_PQ"> 
+                            <low value="2" inclusive="true"/> 
+                          </value> 
+                        </observation> 
+                      </sourceOf> 
+                    </observation> 
+                  </sourceOf> 
+                </act> 
+              </sourceOf> 
+            </act> 
+          </sourceOf>  
+          <head code="ev1"/> 
+        </evidence>  
+        
+       
+   
+        <evidence typeCode="RULE"> 
+          <sourceOf typeCode="PRCN"> 
+            <conjunctionCode code="OR"/>  
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true"> 
+              <!-- Laboratory Test, Result pattern -->  
+              <templateId root="2.16.840.1.113883.3.560.1.12"/>  
+              <id root="c98094fd-3f46-4c13-8c72-e662cdbd0faf"/>  
+              <code code="30954-2" displayName="Results" codeSystem="2.16.840.1.113883.6.1"/>  
+              <sourceOf typeCode="COMP"> 
+                <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                  <code code="2.16.840.1.113883.3.666.5.787" displayName="Hospital Measures-Neutrophil count Grouping Value Set" codeSystem="2.16.840.1.113883.3.560.101.1"/>  
+                  <title>Laboratory Test, Result: Hospital Measures-Neutrophil count (result &lt; 500 per mm3)</title>  
+                  <statusCode code="completed"/>  
+                  <sourceOf typeCode="REFR"> 
+                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                      <templateId root="2.16.840.1.113883.3.560.1.1019.3"/>  
+                      <code code="385676005" codeSystem="2.16.840.1.113883.6.96" displayName="result" codeSystemName="SNOMED-CT"/>  
+                      <value xsi:type="IVL_PQ"> 
+                        <high value="500" unit="/mm3" inclusive="false"/> 
+                      </value> 
+                    </observation> 
+                  </sourceOf> 
+                </observation> 
+              </sourceOf> 
+            </act> 
+          </sourceOf>  
+          <head code="ev3"/> 
+        </evidence>  
+       
+        <evidence typeCode="RULE"> 
+          <!--
+         **************************************************************   
+         example-1
+         **************************************************************
+      -->  
+          <sourceOf typeCode="PRCN"> 
+            <conjunctionCode code="AND"/>  
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+              <!-- Laboratory Test, Result pattern -->
+              <templateId root="2.16.840.1.113883.3.560.1.12"/>  
+              <id root="8a4d92b2-397a-48d2-0139-c61d57a55046"/>  
+              <code code="30954-2" displayName="Results" codeSystem="2.16.840.1.113883.6.1"/>  
+              <sourceOf typeCode="COMP"> 
+                <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                  <code code="2.16.840.1.113883.3.464.1003.198.12.1013" displayName="HbA1c Laboratory Test Grouping Value Set" codeSystem="2.16.840.1.113883.3.560.101.1"/>  
+                  <title>Laboratory Test, Result: HbA1c Laboratory Test (result)</title>  
+                  <statusCode code="completed"/>  
+                  <sourceOf typeCode="REFR"> 
+                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                      <templateId root="2.16.840.1.113883.3.560.1.1019.3"/>  
+                      <code code="385676005" codeSystem="2.16.840.1.113883.6.96" displayName="result" codeSystemName="SNOMED-CT"/>  
+                      <value xsi:type="ANYNonNull"/> 
+                    </observation> 
+                  </sourceOf>  
+                  <sourceOf typeCode="DURING"> 
+                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                      <id root="8a4d92b2-397a-48d2-0139-c61d57a5503f"/>  
+                      <title>Measurement Period</title> 
+                    </observation> 
+                  </sourceOf> 
+                </observation> 
+              </sourceOf> 
+            </act> 
+          </sourceOf>  
+          <head code="ev5"/> 
+        </evidence>  
+       
+        <evidence typeCode="RULE"> 
+          <!--
+         **************************************************************   
+         example-3
+         **************************************************************
+      -->  
+          <sourceOf typeCode="PRCN"> 
+            <conjunctionCode code="AND"/>  
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+              <!-- Laboratory Test, Result pattern -->
+              <templateId root="2.16.840.1.113883.3.560.1.12"/>  
+              <id root="40280381-3f77-75c9-013f-77f65ccb015b"/>  
+              <code code="30954-2" displayName="Results" codeSystem="2.16.840.1.113883.6.1"/>  
+              <sourceOf typeCode="COMP"> 
+                <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                  <code code="2.16.840.1.113883.3.464.1003.104.12.1012" displayName="HDL-C Laboratory Test Grouping Value Set" codeSystem="2.16.840.1.113883.3.560.101.1"/>  
+                  <title>Laboratory Test, Result: HDL-C Laboratory Test (result)</title>  
+                  <statusCode code="completed"/>  
+                  <sourceOf typeCode="REFR"> 
+                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                      <templateId root="2.16.840.1.113883.3.560.1.1019.3"/>  
+                      <code code="385676005" codeSystem="2.16.840.1.113883.6.96" displayName="result" codeSystemName="SNOMED-CT"/>  
+                      <value xsi:type="ANYNonNull"/> 
+                    </observation> 
+                  </sourceOf> 
+                </observation> 
+              </sourceOf> 
+            </act> 
+          </sourceOf>  
+          <head code="ev7"/> 
+        </evidence>  
+        <evidence typeCode="RULE"> 
+          <!--
+         **************************************************************   
+         example-4
+         **************************************************************
+      -->  
+          <sourceOf typeCode="PRCN"> 
+            <conjunctionCode code="OR"/>  
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+              <!-- Laboratory Test, Result pattern -->
+              <templateId root="2.16.840.1.113883.3.560.1.12"/>  
+              <id root="40280381-3d61-56a7-013e-6224e2ce2648"/>  
+              <code code="30954-2" displayName="Results" codeSystem="2.16.840.1.113883.6.1"/>  
+              <sourceOf typeCode="COMP"> 
+                <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                  <code code="2.16.840.1.113883.3.464.1003.198.12.1033" displayName="Hepatitis A Antigen Test Grouping Value Set" codeSystem="2.16.840.1.113883.3.560.101.1"/>  
+                  <title>Laboratory Test, Result: Hepatitis A Antigen Test (result: 'Seropositive')</title>  
+                  <statusCode code="completed"/>  
+                  <sourceOf typeCode="REFR"> 
+                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                      <templateId root="2.16.840.1.113883.3.560.1.1019.2"/>  
+                      <code code="385676005" codeSystem="2.16.840.1.113883.6.96" displayName="result" codeSystemName="SNOMED-CT"/>  
+                      <value xsi:type="CD" code="2.16.840.1.113883.3.464.1003.110.12.1054" codeSystem="2.16.840.1.113883.3.560.101.1" displayName="result"/> 
+                    </observation> 
+                  </sourceOf> 
+                </observation> 
+              </sourceOf> 
+            </act> 
+          </sourceOf>  
+          <head code="ev8"/> 
+        </evidence>  
+        
+        
+        <evidence typeCode="RULE"> 
+          <!--
+         **************************************************************   
+         example-7
+         **************************************************************
+      -->  
+          <sourceOf typeCode="PRCN"> 
+            <conjunctionCode code="AND"/>  
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+              <!-- Laboratory Test, Result pattern -->
+              <templateId root="2.16.840.1.113883.3.560.1.12"/>  
+              <id root="40280381-3d61-56a7-013e-8ab774e23993"/>  
+              <code code="30954-2" displayName="Results" codeSystem="2.16.840.1.113883.6.1"/>  
+              <sourceOf typeCode="COMP"> 
+                <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                  <code code="2.16.840.1.113883.3.464.1003.120.12.1002" displayName="HIV Viral Load Grouping Value Set" codeSystem="2.16.840.1.113883.3.560.101.1"/>  
+                  <title>Laboratory Test, Result: HIV Viral Load (result &lt; 200 copies/mL)</title>  
+                  <statusCode code="completed"/>  
+                  <sourceOf typeCode="REFR"> 
+                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                      <templateId root="2.16.840.1.113883.3.560.1.1019.3"/>  
+                      <code code="385676005" codeSystem="2.16.840.1.113883.6.96" displayName="result" codeSystemName="SNOMED-CT"/>  
+                      <value xsi:type="IVL_PQ"> 
+                        <high value="200" unit="[copies]/mL" inclusive="false"/> 
+                      </value> 
+                    </observation> 
+                  </sourceOf> 
+                </observation> 
+              </sourceOf> 
+            </act> 
+          </sourceOf>  
+          <head code="ev11"/> 
+        </evidence>  
+       
+        <evidence typeCode="RULE"> 
+          <!--
+         **************************************************************   
+         example-9
+         **************************************************************
+      -->  
+          <sourceOf typeCode="PRCN"> 
+            <conjunctionCode code="AND"/>  
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+              <!-- Laboratory Test, Result pattern -->
+              <templateId root="2.16.840.1.113883.3.560.1.12"/>  
+              <id root="40280381-3e93-d1af-013e-b297a0bb5bb8"/>  
+              <code code="30954-2" displayName="Results" codeSystem="2.16.840.1.113883.6.1"/>  
+              <sourceOf typeCode="COMP"> 
+                <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                  <code code="2.16.840.1.113883.3.600.872" displayName="LDL Code Grouping Value Set" codeSystem="2.16.840.1.113883.3.560.101.1"/>  
+                  <title>Laboratory Test, Result: LDL Code (result &lt; 100 mg/dL)</title>  
+                  <statusCode code="completed"/>  
+                  <sourceOf typeCode="REFR"> 
+                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                      <templateId root="2.16.840.1.113883.3.560.1.1019.3"/>  
+                      <code code="385676005" codeSystem="2.16.840.1.113883.6.96" displayName="result" codeSystemName="SNOMED-CT"/>  
+                      <value xsi:type="IVL_PQ"> 
+                        <high value="100" unit="mg/dL" inclusive="false"/> 
+                      </value> 
+                    </observation> 
+                  </sourceOf>  
+                  <sourceOf typeCode="DURING"> 
+                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                      <id root="40280381-3e93-d1af-013e-b297a0bb5bc3"/>  
+                      <title>Measurement Period</title> 
+                    </observation> 
+                  </sourceOf> 
+                </observation> 
+              </sourceOf> 
+            </act> 
+          </sourceOf>  
+          <head code="ev13"/> 
+        </evidence>  
+        <evidence typeCode="RULE"> 
+          <!--
+         **************************************************************   
+         example-10
+         **************************************************************
+      -->  
+          <sourceOf typeCode="PRCN"> 
+            <conjunctionCode code="AND"/>  
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+              <!-- Laboratory Test, Result pattern -->
+              <templateId root="2.16.840.1.113883.3.560.1.12"/>  
+              <id root="8a4d92b2-3946-cdae-0139-7941864b000a"/>  
+              <code code="30954-2" displayName="Results" codeSystem="2.16.840.1.113883.6.1"/>  
+              <sourceOf typeCode="COMP"> 
+                <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                  <code code="2.16.840.1.113883.3.526.3.1248" displayName="LDL-C Laboratory Test Grouping Value Set" codeSystem="2.16.840.1.113883.3.560.101.1"/>  
+                  <title>Laboratory Test, Result: LDL-C Laboratory Test (result &lt; 100 mg/dL)</title>  
+                  <statusCode code="completed"/>  
+                  <sourceOf typeCode="REFR"> 
+                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                      <templateId root="2.16.840.1.113883.3.560.1.1019.3"/>  
+                      <code code="385676005" codeSystem="2.16.840.1.113883.6.96" displayName="result" codeSystemName="SNOMED-CT"/>  
+                      <value xsi:type="IVL_PQ"> 
+                        <high value="100" unit="mg/dL" inclusive="false"/> 
+                      </value> 
+                    </observation> 
+                  </sourceOf> 
+                </observation> 
+              </sourceOf> 
+            </act> 
+          </sourceOf>  
+          <head code="ev14"/> 
+        </evidence>  
+        
+        <evidence typeCode="RULE"> 
+          <!--
+         **************************************************************   
+         example-12
+         **************************************************************
+      -->  
+          <sourceOf typeCode="PRCN"> 
+            <conjunctionCode code="AND"/>  
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+              <!-- Laboratory Test, Result pattern -->
+              <templateId root="2.16.840.1.113883.3.560.1.12"/>  
+              <id root="40280381-3f77-75c9-013f-77f65ccb015d"/>  
+              <code code="30954-2" displayName="Results" codeSystem="2.16.840.1.113883.6.1"/>  
+              <sourceOf typeCode="COMP"> 
+                <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                  <code code="2.16.840.1.113883.3.464.1003.104.12.1014" displayName="Triglycerides Laboratory Test Grouping Value Set" codeSystem="2.16.840.1.113883.3.560.101.1"/>  
+                  <title>Laboratory Test, Result: Triglycerides Laboratory Test (result)</title>  
+                  <statusCode code="completed"/>  
+                  <sourceOf typeCode="REFR"> 
+                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                      <templateId root="2.16.840.1.113883.3.560.1.1019.3"/>  
+                      <code code="385676005" codeSystem="2.16.840.1.113883.6.96" displayName="result" codeSystemName="SNOMED-CT"/>  
+                      <value xsi:type="ANYNonNull"/> 
+                    </observation> 
+                  </sourceOf> 
+                </observation> 
+              </sourceOf> 
+            </act> 
+          </sourceOf>  
+          <head code="ev16"/> 
+        </evidence>  
+        <evidence typeCode="RULE"> 
+          <!--
+         **************************************************************   
+         example-13
+         **************************************************************
+      -->  
+          <sourceOf typeCode="PRCN"> 
+            <conjunctionCode code="OR"/>  
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+              <!-- Laboratory Test, Result pattern -->
+              <templateId root="2.16.840.1.113883.3.560.1.12"/>  
+              <id root="40280381-3d61-56a7-013e-62abf57e3016"/>  
+              <code code="30954-2" displayName="Results" codeSystem="2.16.840.1.113883.6.1"/>  
+              <sourceOf typeCode="COMP"> 
+                <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                  <code code="2.16.840.1.113883.3.464.1003.109.12.1019" displayName="Macroalbumin Test Grouping Value Set" codeSystem="2.16.840.1.113883.3.560.101.1"/>  
+                  <title>Laboratory Test, Result: Macroalbumin Test (result: 'Positive Finding')</title>  
+                  <statusCode code="completed"/>  
+                  <sourceOf typeCode="REFR"> 
+                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                      <templateId root="2.16.840.1.113883.3.560.1.1019.2"/>  
+                      <code code="385676005" codeSystem="2.16.840.1.113883.6.96" displayName="result" codeSystemName="SNOMED-CT"/>  
+                      <value xsi:type="CD" code="2.16.840.1.113883.3.464.1003.121.12.1016" codeSystem="2.16.840.1.113883.3.560.101.1" displayName="result"/> 
+                    </observation> 
+                  </sourceOf> 
+                </observation> 
+              </sourceOf> 
+            </act> 
+          </sourceOf>  
+          <head code="ev17"/> 
+        </evidence>  
+       
+        
+        <evidence typeCode="RULE"> 
+          <!--
+         **************************************************************   
+         example-16
+         **************************************************************
+      -->  
+          <sourceOf typeCode="PRCN"> 
+            <conjunctionCode code="AND"/>  
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+              <!-- Laboratory Test, Result pattern -->
+              <templateId root="2.16.840.1.113883.3.560.1.12"/>  
+              <id root="40280381-3d61-56a7-013e-669cbc17483e"/>  
+              <code code="30954-2" displayName="Results" codeSystem="2.16.840.1.113883.6.1"/>  
+              <sourceOf typeCode="COMP"> 
+                <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                  <code code="2.16.840.1.113883.3.464.1003.108.12.1017" displayName="Pap Test Grouping Value Set" codeSystem="2.16.840.1.113883.3.560.101.1"/>  
+                  <title>Laboratory Test, Result: Pap Test (result)</title>  
+                  <statusCode code="completed"/>  
+                  <sourceOf typeCode="REFR"> 
+                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                      <templateId root="2.16.840.1.113883.3.560.1.1019.3"/>  
+                      <code code="385676005" codeSystem="2.16.840.1.113883.6.96" displayName="result" codeSystemName="SNOMED-CT"/>  
+                      <value xsi:type="ANYNonNull"/> 
+                    </observation> 
+                  </sourceOf>  
+                  <sourceOf typeCode="EAE" inversionInd="true"> 
+                    <pauseQuantity xsi:type="IVL_PQ"> 
+                      <high inclusive="true" value="2" unit="a"/> 
+                    </pauseQuantity>  
+                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                      <id root="40280381-3d61-56a7-013e-669cbc17483c"/>  
+                      <title>Measurement Period</title> 
+                    </observation> 
+                  </sourceOf> 
+                </observation> 
+              </sourceOf> 
+            </act> 
+          </sourceOf>  
+          <head code="ev20"/> 
+        </evidence>  
+        <evidence typeCode="RULE"> 
+          <!--
+         **************************************************************   
+         example-17
+         **************************************************************
+      -->  
+          <sourceOf typeCode="PRCN"> 
+            <conjunctionCode code="OR"/>  
+            <subsetCode code="FIRST"/>  
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+              <!-- Laboratory Test, Result pattern -->
+              <templateId root="2.16.840.1.113883.3.560.1.12"/>  
+              <id root="40280381-3e93-d1af-013e-b277ee255a61"/>  
+              <code code="30954-2" displayName="Results" codeSystem="2.16.840.1.113883.6.1"/>  
+              <sourceOf typeCode="COMP"> 
+                <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                  <code code="2.16.840.1.113883.3.600.875" displayName="High Density Lipoprotein (HDL) Grouping Value Set" codeSystem="2.16.840.1.113883.3.560.101.1"/>  
+                  <title>Laboratory Test, Result: High Density Lipoprotein (HDL) (result &lt; 40 mg/dL)</title>  
+                  <statusCode code="completed"/>  
+                  <sourceOf typeCode="REFR"> 
+                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                      <templateId root="2.16.840.1.113883.3.560.1.1019.3"/>  
+                      <code code="385676005" codeSystem="2.16.840.1.113883.6.96" displayName="result" codeSystemName="SNOMED-CT"/>  
+                      <value xsi:type="IVL_PQ"> 
+                        <high value="40" unit="mg/dL" inclusive="false"/> 
+                      </value> 
+                    </observation> 
+                  </sourceOf>  
+                  <sourceOf typeCode="DURING"> 
+                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                      <id root="40280381-3e93-d1af-013e-b277ee245a54"/>  
+                      <title>Measurement Period</title> 
+                    </observation> 
+                  </sourceOf> 
+                </observation> 
+              </sourceOf> 
+            </act> 
+          </sourceOf>  
+          <head code="ev21"/> 
+        </evidence>  
+        <evidence typeCode="RULE"> 
+          <!--
+         **************************************************************   
+         example-18
+         **************************************************************
+      -->  
+          <sourceOf typeCode="PRCN"> 
+            <conjunctionCode code="AND"/>  
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+              <!-- Laboratory Test, Result pattern -->
+              <templateId root="2.16.840.1.113883.3.560.1.12"/>  
+              <id root="40280381-3d61-56a7-013e-5d40019f6c10"/>  
+              <code code="30954-2" displayName="Results" codeSystem="2.16.840.1.113883.6.1"/>  
+              <sourceOf typeCode="COMP"> 
+                <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                  <code code="2.16.840.1.113883.3.464.1003.110.12.1052" displayName="Chlamydia Screening Grouping Value Set" codeSystem="2.16.840.1.113883.3.560.101.1"/>  
+                  <title>Laboratory Test, Result: Chlamydia Screening (result)</title>  
+                  <statusCode code="completed"/>  
+                  <sourceOf typeCode="REFR"> 
+                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                      <templateId root="2.16.840.1.113883.3.560.1.1019.3"/>  
+                      <code code="385676005" codeSystem="2.16.840.1.113883.6.96" displayName="result" codeSystemName="SNOMED-CT"/>  
+                      <value xsi:type="ANYNonNull"/> 
+                    </observation> 
+                  </sourceOf>  
+                  <sourceOf typeCode="DURING"> 
+                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                      <id root="40280381-3d61-56a7-013e-5d40019f6c0f"/>  
+                      <title>Measurement Period</title> 
+                    </observation> 
+                  </sourceOf> 
+                </observation> 
+              </sourceOf> 
+            </act> 
+          </sourceOf>  
+          <head code="ev22"/> 
+        </evidence>  
+        <evidence typeCode="RULE"> 
+          <!--
+         **************************************************************   
+         example-19
+         **************************************************************
+      -->  
+          <sourceOf typeCode="PRCN"> 
+            <conjunctionCode code="AND"/>  
+            <act classCode="ACT" moodCode="EVN" isCriterionInd="true">
+              <!-- Laboratory Test, Result pattern -->
+              <templateId root="2.16.840.1.113883.3.560.1.12"/>  
+              <id root="40280381-3d61-56a7-013e-6696af844780"/>  
+              <code code="30954-2" displayName="Results" codeSystem="2.16.840.1.113883.6.1"/>  
+              <sourceOf typeCode="COMP"> 
+                <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                  <code code="2.16.840.1.113883.3.526.3.401" displayName="Prostate Specific Antigen Test Grouping Value Set" codeSystem="2.16.840.1.113883.3.560.101.1"/>  
+                  <title>Laboratory Test, Result: Prostate Specific Antigen Test (result &lt;= 10 ng/mL)</title>  
+                  <statusCode code="completed"/>  
+                  <sourceOf typeCode="REFR"> 
+                    <observation classCode="OBS" moodCode="EVN" isCriterionInd="true"> 
+                      <templateId root="2.16.840.1.113883.3.560.1.1019.3"/>  
+                      <code code="385676005" codeSystem="2.16.840.1.113883.6.96" displayName="result" codeSystemName="SNOMED-CT"/>  
+                      <value xsi:type="IVL_PQ"> 
+                        <high value="10" unit="ng/mL" inclusive="true"/> 
+                      </value> 
+                    </observation> 
+                  </sourceOf> 
+                </observation> 
+              </sourceOf> 
+            </act> 
+          </sourceOf>  
+          <head code="ev23"/> 
+        </evidence>  
+       
+       
+      
+      </entry> 
+    </section> 
+  </component> 
+</QualityMeasureDocument>

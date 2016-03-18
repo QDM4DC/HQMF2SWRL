@@ -1,0 +1,6 @@
+1.Make sure your server is running JDK and Tomcat.
+2.Deploy swrl_web.war under Tomcat.
+3.Open http://[host]:8080/qdm2swrl.
+4.The default xmlfilePath is "d:/test/temp"; owlFilePath is "d:/test/owl"; the upload file will be saved at this path.
+5.Access your browser at : http://localhost:8080/ncbo
+6.The diagnostic_criteria_upper_ontology.owl is an owl file for test, the lab_test_example.xml is an xml file for test.You need to choose both of them and submit to generate the rules.
